@@ -14,13 +14,10 @@ import com.logica.clases.*;
 
 
 public final class main {
-    private main() {
-    }
-
     public static void main(String[] args) {
+
         EjecutarSaludo saludo = new EjecutarSaludo();
         saludo.Saludo("Daniel", new SaludoCallback() {
-
             @Override
             public void onSaludoCompletado(String mensaje) {
                 System.out.println("Callback recibido: " + mensaje);
@@ -31,7 +28,7 @@ public final class main {
         System.out.println();
         System.out.println("************************** EXTRA ******************");
         System.out.println();
-        
+
         /* Crea un simulador de pedidos de un restaurante utilizando callbacks.
         * Estará formado por una función que procesa pedidos.
         * Debe aceptar el nombre del plato, una callback de confirmación, una
@@ -43,22 +40,22 @@ public final class main {
         * - Debe notificar que el plato está listo o ha sido entregado.
         */
 
-        Funciones.ordenProcesada("Pollo", new confirmacionCallback() {
-            @Override
-            public void onConfirmacion(String mensaje){
-                System.out.println(mensaje);
-            }            
-        }, new listoCallback() {
-          @Override
-          public void onListo(String mensaje){
-            System.out.println(mensaje);
-          }  
-        }, new entregadoCallback() {
-            @Override
-            public void onEntregado(String mensaje){
-                System.out.println(mensaje);
-            }
-        });
+        // Funciones.ordenProcesada("Pollo", new confirmacionCallback() {
+        //     @Override
+        //     public void onConfirmacion(String mensaje){
+        //         System.out.println(mensaje);
+        //     }            
+        // }, new listoCallback() {
+        //   @Override
+        //   public void onListo(String mensaje){
+        //     System.out.println(mensaje);
+        //   }  
+        // }, new entregadoCallback() {
+        //     @Override
+        //     public void onEntregado(String mensaje){
+        //         System.out.println(mensaje);
+        //     }
+        // });
          /*  *******Con expresiones lambda****
          mensaje -> System.out.println(mensaje), 
          mensaje -> System.out.println(mensaje), 
